@@ -6,10 +6,6 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-	"waitFor": "onCreateCommand",
-  	"initializeCommand": "docker system prune -af",
-	 "updateContentCommand": "python3 -m pip install -r requirements.txt",
-	 "postCreateCommand": "pip install spylon-kernel && python -m spylon_kernel install --user",	
 
 	// Configure tool-specific properties.
 	"customizations": {
