@@ -2,7 +2,6 @@ FROM mcr.microsoft.com/devcontainers/universal:2.1.1
 
 RUN curl -fLo cs https://git.io/coursier-cli-linux &&\
     chmod +x cs &&\
-    ./cs java --jvm adopt:1.8.0-252 --env >> .env &&\
     ./cs install --env >> .env &&\
     ./cs install \
       ammonite:2.1.4 \
