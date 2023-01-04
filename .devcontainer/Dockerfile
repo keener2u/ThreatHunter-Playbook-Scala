@@ -17,7 +17,7 @@ RUN tar -xzf /tmp/sbt-${SBT_VERSION}.tar.gz -C /usr/local
 
 # -------------------------- STAGE 2 -----------------------------------------
 # Install Scala and SBT
-FROM mcr.microsoft.com/vscode/devcontainers/java:17-bullseye
+FROM mcr.microsoft.com/devcontainers/universal:2.1.1
 
 COPY --from=download-and-extract-stage /usr/local/scala3 /usr/local/scala3
 ENV SCALA_HOME=/usr/local/scala3
