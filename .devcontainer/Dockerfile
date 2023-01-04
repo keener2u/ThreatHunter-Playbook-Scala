@@ -1,8 +1,3 @@
-
-RUN tar -xzf /tmp/sbt-${SBT_VERSION}.tar.gz -C /usr/local
-
-# -------------------------- STAGE 2 -----------------------------------------
-# Install Scala and SBT
 FROM mcr.microsoft.com/devcontainers/universal:2.1.1
 
 RUN curl -fLo cs https://git.io/coursier-cli-linux &&\
