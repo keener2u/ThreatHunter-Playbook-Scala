@@ -17,22 +17,7 @@
 			    "ms-toolsai.jupyter"
 			]
 		}
-		"hostRequirements": {
-			"cpus": 4
-		  },
-		  "waitFor": "onCreateCommand",
-		  "initializeCommand": "docker system prune -af",
-		  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-		  "postCreateCommand": "",
-		  "customizations": {
-			"codespaces": {
-			  "openFiles": []
-			},
-			"vscode": {
-			  "extensions": [
-
-			  ]
-			}
+		
 		  }
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
