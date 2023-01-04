@@ -9,7 +9,7 @@
 	"waitFor": "onCreateCommand",
   	"initializeCommand": "docker system prune -af",
 	 "updateContentCommand": "python3 -m pip install -r requirements.txt",
-	 "postCreateCommand": "python -m spylon_kernel install --user",	
+	 "postCreateCommand": "pip install spylon-kernel && python -m spylon_kernel install --user",	
 
 	// Configure tool-specific properties.
 	"customizations": {
