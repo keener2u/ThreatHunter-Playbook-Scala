@@ -26,6 +26,8 @@
 		}
 		
 	},
+	"remoteEnv": { "PATH": "${containerEnv:PATH}:/usr/local/scala3:/usr/local/sbt" },
+
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "scala --version",
 
