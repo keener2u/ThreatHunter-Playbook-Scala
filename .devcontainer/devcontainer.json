@@ -6,9 +6,16 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
+	"waitFor": "onCreateCommand",
+  "initializeCommand": "docker system prune -af",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt",
+  "postCreateCommand": "python -m spylon_kernel install",
 
 	// Configure tool-specific properties.
 	"customizations": {
+		    "codespaces": {
+      			"openFiles": []
+   			 },
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
