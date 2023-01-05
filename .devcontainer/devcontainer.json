@@ -1,35 +1,23 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/java
 {
-	"name": "Scala",
-	"build": { "dockerfile": "Dockerfile" },
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Configure tool-specific properties.
-	"customizations": {
-		    "codespaces": {
-      			"openFiles": []
-   			 },
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-			 	"scalameta.metals",
-			    "ms-toolsai.jupyter"
-			]
-		}
-		
-	},
-	"remoteEnv": { "PATH": "${containerEnv:PATH}:/usr/local/scala3:/usr/local/sbt" },
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "scala --version",
-
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode",
-	"features": {
-		"git": "latest"
-	}
+  "image": "mcr.microsoft.com/devcontainers/universal:2.1.1",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/sbt-sdkman:2": {}
+  },
+  "onCreateCommand": "curl -Lo coursier https://git.io/coursier-cli && chmod +x coursier && ./coursier launch --fork almond --scala 2.12.17 -- --install",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt",
+  "postCreateCommand": "ln -sfn /usr/local/sdkman/candidates/java/11.0.17-ms /usr/local/sdkman/candidates/java/current",
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python"
+      ]
+    }
+  }
 }
