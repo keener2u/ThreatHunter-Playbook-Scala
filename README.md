@@ -1,7 +1,7 @@
-#Exercise in Scala
+# Exercise in Scala
 I am using this repo as an exercise to continue to build my capabilities in Scala and analytics by slowly porting over the playbook from Python to Scala.
 
-#Finished Hunts
+# Finished Hunts
 [LSASS Memory Read](docs/hunts/windows/170105-LSASSMemoryReadAccess/LSASSMemoryRead.ipynb)
 
 
