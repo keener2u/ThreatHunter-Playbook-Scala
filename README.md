@@ -1,3 +1,13 @@
+#Exercise in Scala
+I am using this repo as an exercise to continue to build my capabilities in Scala and analytics by slowly porting over the playbook from Python to Scala.
+
+#Finished Hunts
+[LSASS Memory Read](docs/hunts/windows/170105-LSASSMemoryReadAccess/LSASSMemoryRead.ipynb)
+
+
+
+
+---------------------------------------
 # The Threat Hunter Playbook
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OTRF/ThreatHunter-Playbook/master)
